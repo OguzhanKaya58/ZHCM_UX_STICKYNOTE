@@ -1,0 +1,42 @@
+<mvc:View
+    controllerName="zhcm.ux.sticky.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:custom="zhcm.ux.sticky.controls">
+
+    <Page>
+
+        <customHeader>
+            <Toolbar>
+                <Title text="Notlar" />
+                <ToolbarSpacer />
+                <Button
+                    text="Yeni Not"
+                    icon="sap-icon://add"
+                    press=".onAddNote" />
+            </Toolbar>
+        </customHeader>
+
+        <content>
+            <VBox class="sapUiContentPadding">
+
+                <FlexBox
+                    wrap="Wrap"
+                    items="{notes>/notes}">
+
+                    <custom:StickyNote
+                        title="{notes>title}"
+                        content="{notes>content}"
+                        backgroundColor="{notes>backgroundColor}"
+                        editable="{= ${notes>/activeIndex} === ${notes>$index} }"
+                        press=".onNotePress"
+                        delete=".onNoteDelete"
+                        class="sapUiSmallMargin" />
+
+                </FlexBox>
+
+            </VBox>
+        </content>
+
+    </Page>
+</mvc:View>

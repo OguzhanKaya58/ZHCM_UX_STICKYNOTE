@@ -1,0 +1,11 @@
+.stickyNote {
+    width: 220px;
+    min-height: 160px;
+    padding: 0.75rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.stickyNote .sapMText {
+    font-size: 0.9rem;
+}
