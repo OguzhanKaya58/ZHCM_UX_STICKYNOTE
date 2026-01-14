@@ -2,10 +2,9 @@
     controllerName="zhcm.ux.sticky.controller.Main"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    xmlns:custom="zhcm.ux.sticky.controls">
-
-    <Page>
-
+    xmlns:custom="zhcm.ux.sticky.controls"
+>
+    <Page  class="MainPage">
         <customHeader>
             <Toolbar>
                 <Title text="Notlar" />
@@ -13,29 +12,35 @@
                 <Button
                     text="Yeni Not"
                     icon="sap-icon://add"
-                    press=".onAddNote" />
+                    press=".onAddNote"
+                    type="Accept"
+                />
+                <Button
+                    icon="sap-icon://favorite"
+                    press=".onGetConffetti"
+                    type="Reject"
+                    visible="false"
+                />
             </Toolbar>
         </customHeader>
 
         <content>
             <VBox class="sapUiContentPadding">
-
                 <FlexBox
                     wrap="Wrap"
-                    items="{notes>/notes}">
-
-                   <custom:StickyNote
-    title="{notes>title}"
-    content="{notes>content}"
-    backgroundColor="{notes>backgroundColor}"
-    editable="{= ${notes>/activeIndex} === ${notes>$index} }"
-    delete=".onNoteDelete"
-    class="sapUiSmallMargin" />
-
+                    items="{notes>/notes}"
+                >
+                    <custom:StickyNote
+                        title="{notes>title}"
+                        content="{notes>content}"
+                        backgroundColor="{notes>backgroundColor}"
+                        editable="{= ${notes>/activeIndex} === ${notes>$index} }"
+                        delete=".onNoteDelete"
+                        detail=".onDetail"
+                        class="sapUiSmallMargin"
+                    />
                 </FlexBox>
-
             </VBox>
         </content>
-
     </Page>
 </mvc:View>
