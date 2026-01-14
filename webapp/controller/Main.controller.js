@@ -8,6 +8,7 @@ sap.ui.define([
 
 		onInit: function () {
 			this.getView().setModel(new JSONModel({
+				activeIndex: -1,
 				notes: [
 					{
 						title: "Toplantı",

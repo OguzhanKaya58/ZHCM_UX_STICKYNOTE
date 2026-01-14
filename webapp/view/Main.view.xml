@@ -24,14 +24,13 @@
                     wrap="Wrap"
                     items="{notes>/notes}">
 
-                    <custom:StickyNote
-                        title="{notes>title}"
-                        content="{notes>content}"
-                        backgroundColor="{notes>backgroundColor}"
-                        editable="{= ${notes>/activeIndex} === ${notes>$index} }"
-                        press=".onNotePress"
-                        delete=".onNoteDelete"
-                        class="sapUiSmallMargin" />
+                   <custom:StickyNote
+    title="{notes>title}"
+    content="{notes>content}"
+    backgroundColor="{notes>backgroundColor}"
+    editable="{= ${notes>/activeIndex} === ${notes>$index} }"
+    delete=".onNoteDelete"
+    class="sapUiSmallMargin" />
 
                 </FlexBox>
 
