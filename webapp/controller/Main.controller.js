@@ -71,7 +71,7 @@ sap.ui.define([
 			this._getConfetti(-1);
 		},
 		onDetail:function(oEvent){
-			debugger;
+			
 		},
 
 	});

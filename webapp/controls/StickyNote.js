@@ -20,8 +20,8 @@ sap.ui.define([
     MessageToast
 ) {
     "use strict";
-
     return Control.extend("zhmc.ux.sticky.controls.StickyNote", {
+
         metadata: {
             properties: {
                 title: { type: "string", defaultValue: "", bindable: true },
@@ -101,7 +101,7 @@ sap.ui.define([
                         this._bDetailMode = false;
                         this._syncUI();
                         this.setBackgroundColor("#FFF9C4"); // kart rengi değişiyor
-                        this._runConfetti();
+                        // this._runConfetti();
                     } else {
                         // Detail modunu aç
                         this._bDetailMode = true;
@@ -110,7 +110,7 @@ sap.ui.define([
                     }
                 }
             });
-            
+
 
 
             /* ---------- ACTION BOX ---------- */
@@ -231,7 +231,7 @@ sap.ui.define([
                 .class(oControl._bEdit ? "stickyNoteSelected" : "")
                 .style("background-color", oControl.getBackgroundColor())
                 .style("padding", "1rem")
-                .style("border-radius", "12px")
+                .style("border-radius", "30px")
                 .style("width", "440px")
                 .style("height", "320px")
                 .style("box-shadow", "0 4px 12px rgba(0,0,0,0.1)")
