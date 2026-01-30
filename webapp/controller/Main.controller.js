@@ -36,7 +36,7 @@ sap.ui.define([
 
 		onAddNote: function () {
 			var oModel = this.getView().getModel("notes");
-			var aNotes = oModel.getProperty("/notes");
+			var aNotes = oModel.getProperty("/notes") || [];
 
 			aNotes.push({
 				title: "",
